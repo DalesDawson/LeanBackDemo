@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.wt.leanbackutil"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '26.0.2'
+
+    dexOptions {
+        jumboMode true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support:support-annotations:27.1.1') {
+        force = true
+    }
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation project(':leanback')
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation project(':mzbanner')
+    //加载fresco图片框架
+    implementation 'com.facebook.fresco:fresco:1.10.0'
+    // 在 API < 14 上的机器支持 WebP 时，需要添加
+    compile 'com.facebook.fresco:animated-base-support:0.12.0'
+    // 支持 GIF 动图，需要添加
+    compile 'com.facebook.fresco:animated-gif:1.10.0'
+    // 支持 WebP （静态图+动图），需要添加
+    compile 'com.facebook.fresco:animated-webp:1.10.0'
+    compile 'com.facebook.fresco:webpsupport:1.10.0'
+    compile 'com.facebook.fresco:imagepipeline-okhttp3:0.12.0+'
+    // 内存泄漏.
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+    implementation project(':tvrecyclerview')
+    //获取系统的属性()String accept = InternalAccessor.getString(Rc.string.accept);
+    //float sbar_height = InternalAccessor.getDimension(Rc.dimen.status_bar_height);
+    //int notif_color = InternalAccessor.getColor("config_defaultNotificationColor");
+    compile 'com.anggrayudi:android-hidden-api:0.0.7'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'de.mrmaffen:libvlc-android:2.1.12@aar'
+    compile 'com.github.danylovolokh:list-visibility-utils:0.2.0'
+
+}

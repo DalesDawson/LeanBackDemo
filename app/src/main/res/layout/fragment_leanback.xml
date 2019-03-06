@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <com.wt.leanbackutil.view.TvHorizontalGridView
+        android:id="@+id/horizontal_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_318"
+        android:layout_marginLeft="@dimen/w_20"
+        android:layout_marginRight="@dimen/w_20"
+        android:layout_marginTop="@dimen/h_100"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:scrollbarSize="@dimen/w_5"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbHorizontal="@drawable/list_scroller_shape"
+        android:scrollbarTrackHorizontal="@android:color/transparent"
+        android:scrollbars="horizontal"/>
+
+    <com.wt.leanbackutil.view.FocusRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_318"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/h_100"
+        android:scrollbarSize="@dimen/w_5"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbHorizontal="@drawable/list_scroller_shape"
+        android:scrollbarTrackHorizontal="@android:color/transparent"
+        android:scrollbars="horizontal" />
+</LinearLayout>

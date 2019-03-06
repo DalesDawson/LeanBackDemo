@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LeanbackUtil</string>
+    <string name="main_tab_test">测试</string>
+    <string name="main_tab_home">推荐</string>
+    <string name="main_tab_latest_music">最新音乐</string>
+    <string name="main_tab_rank">排行榜</string>
+    <string name="main_tab_singer">歌手</string>
+    <string name="main_tab_song_sheet">歌单</string>
+    <string name="main_tab_mv">MV</string>
+    <string name="main_tab_classical_music">古典音乐</string>
+    <string name="main_tab_music_hall">音乐馆</string>
+    <string name="main_tab_radio">电台</string>
+
+    <string name="category_search_focus">查找focus</string>
+</resources>

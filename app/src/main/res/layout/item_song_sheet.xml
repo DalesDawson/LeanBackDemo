@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/w_303"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="@dimen/w_303"
+        android:layout_height="@dimen/h_303"
+        android:duplicateParentState="true">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:actualImageScaleType="fitXY"
+            android:duplicateParentState="true"
+            android:background="@drawable/shape_botton_bg_comm"
+            fresco:placeholderImage="@drawable/ic_launcher_background"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundedCornerRadius="@dimen/h_8" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/title_view"
+        android:layout_width="@dimen/w_303"
+        android:layout_height="@dimen/h_45"
+        android:layout_marginBottom="@dimen/h_20"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingLeft="@dimen/w_20"
+        android:paddingRight="@dimen/w_20"
+        android:singleLine="true"
+        android:textColor="@color/title_none_color"
+        android:textSize="@dimen/h_33" />
+</LinearLayout>
